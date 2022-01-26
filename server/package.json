@@ -1,0 +1,21 @@
+{
+  "name": "server-template",
+  "version": "1.0.0",
+  "description": "apollo-graphql server template backend",
+  "main": "nodemon src/index",
+  "scripts": {
+    "start": "nodemon src/index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.6.2",
+    "graphql": "^16.3.0"
+  },
+
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
