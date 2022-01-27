@@ -1,14 +1,18 @@
-import React from "react";
-import { render } from "react-dom";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Pages from './pages/';
+import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 // Importing the Bootstrap CSS
-import "bootstrap/dist/css/bootstrap.min.css";
 
-const rootElement = document.getElementById("root");
-render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
-  rootElement
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+  cache: new InMemoryCache(),
+});
+  
+ReactDOM.render(
+  <ApolloProvider client={client}>
+    <Pages />
+  </ ApolloProvider>,
+  document.getElementById('root')
 );
